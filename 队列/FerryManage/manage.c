@@ -116,7 +116,7 @@ void pushFerry(int n)
 //渡口管理
 void ferryManage(int a[])
 {
-	int i,rec,result;
+	int i,rec,result,k;
 	InitQueue();
 	totalNum=0;busNum=0;truckNum=0,i=0;
 	while(i<10)
@@ -183,4 +183,10 @@ void ferryManage(int a[])
 	printf("客车队列里还有%d辆客车在等待！\n",busLen);
 	printf("货车队列里还有%d辆货车在等待！\n",truckLen);
 	printf("渡船装载汽车的情况为：%d辆客车，%d辆货车！\n",result,truckNum);
+	printf("渡船上的汽车排队情况如下：\n");
+	for(k=0;k<totalNum;k++)
+	{
+		printf("%5d",ferry[k]);
+	}
+	printf("\n");
 }
